@@ -7,7 +7,7 @@ import auth from '../auth/auth';
 const blogRouter = Router();
 
 blogRouter.post(
-  '/create-blog',
+  '/',
   auth('user'),
   validateRequest(BlogValidation.createBlogValidationSchema),
   BlogController.createBlog,

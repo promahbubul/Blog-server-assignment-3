@@ -1,4 +1,3 @@
- 
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import blogRouter from './app/modules/blog/blog.route';
@@ -11,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use('/api/blog', blogRouter);
+app.use('/api/blogs', blogRouter);
 app.use('/api/auth', userRouter);
 app.use('/api/admin', userRouter);
 
