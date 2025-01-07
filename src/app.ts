@@ -4,6 +4,7 @@ import blogRouter from './app/modules/blog/blog.route';
 import userRouter from './app/modules/user/user.route';
 import globalErrorHandler from './app/middleware/globalErrorHandler';
 import notFound from './app/middleware/notFound';
+import AdminRouter from './app/modules/admin/admin.route';
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(cors());
 
 app.use('/api/blogs', blogRouter);
 app.use('/api/auth', userRouter);
-app.use('/api/admin', userRouter);
+app.use('/api/admin', AdminRouter);
 
 // Root Directory
 app.get('/', (req: Request, res: Response) => {

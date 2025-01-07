@@ -16,6 +16,6 @@ blogRouter.put('/:id', auth('user'), BlogController.updateBlog);
 
 blogRouter.delete('/:id', auth('user'), BlogController.deleteBlog);
 blogRouter.get('/:id', BlogController.getSingleBlog);
-blogRouter.get('/', auth('user'), BlogController.getBlog);
+blogRouter.get('/', BlogController.getBlog);
 
 export default blogRouter;

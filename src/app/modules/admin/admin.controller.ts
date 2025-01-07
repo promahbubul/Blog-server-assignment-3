@@ -2,6 +2,7 @@ import { JwtPayload } from 'jsonwebtoken';
 import catchAsync from '../../utils/catchAsync';
 import sendResponse from '../../utils/sendResponse';
 import { AdminService } from './admin.service';
+import httpStatus from 'http-status';
 
 const blockUser = catchAsync(async (req, res) => {
   const { userId } = req.params;

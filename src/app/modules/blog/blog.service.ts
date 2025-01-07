@@ -8,7 +8,6 @@ import QueryBuilder from '../../builder/QueryBuilder';
 import { searchableFields } from './blog.const';
 
 const createBlog = async (payload: TBlog) => {
-  console.log(payload);
   const result = (await Blog.create(payload)).populate('author');
   return result;
 };

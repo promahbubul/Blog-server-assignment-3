@@ -56,7 +56,7 @@ We have 3 types of API
 - `Blog`
 - `Admin`
 
-In here our example **`base_url`** `http://localhost:5000`
+In here our example **`base_url`** `https://blog-assignment-3-six.vercel.app/`
 
 ## User API
 
