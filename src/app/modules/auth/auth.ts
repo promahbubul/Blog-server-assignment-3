@@ -1,5 +1,3 @@
- 
- 
 import { NextFunction, Request, Response } from 'express';
 import catchAsync from '../../utils/catchAsync';
 import AppError from '../../error/AppError';
@@ -10,7 +8,8 @@ import User from '../user/user.model';
 
 const auth = (RequireRole: string) => {
   return catchAsync(async (req: Request, res: Response, next: NextFunction) => {
-    const token = req.headers.authorization;
+    const Berartoken = req.headers.authorization;
+    const token = Berartoken?.split(' ')[1];
     if (!token) {
       throw new AppError(httpStatus.UNAUTHORIZED, 'You are not Authorized');
     }

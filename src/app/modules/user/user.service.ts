@@ -41,7 +41,7 @@ const login = async (payload: TLoginUser) => {
   );
 
   // const verifiedUser = { email: user.email, role: user.role, name: user.name };
-  
+
   return { token };
 };
 
